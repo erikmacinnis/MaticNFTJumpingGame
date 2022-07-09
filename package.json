@@ -1,20 +1,24 @@
 {
-  "name": "jumping-game",
+  "name": "jumping_game",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "ethers": "^5.6.8",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
+    "sweetalert2": "^11.4.19",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "testing": "node ./src/blockchain/ethers.js  && node ./src/blockchain/factory.js;",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "mocha",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -34,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0"
   }
 }

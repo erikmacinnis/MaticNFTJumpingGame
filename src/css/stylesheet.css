@@ -1,0 +1,256 @@
+img {
+    width: 100px;
+    height: 130px;
+}
+
+.worldhighscoreholder {
+    width: 4px;
+    text-overflow: ellipsis;
+}
+
+.ui.inverted.green.button {
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    left: 780px
+}
+
+.faucet {
+    position: absolute;
+    top: 250px;
+    right: 15px;
+    left: 780px;
+    background-color: white;
+    padding: 10px;
+}
+
+.testnet {
+    position: absolute;
+    top: 350px;
+    right: 15px;
+    left: 780px;
+    background-color: white;
+    padding: 10px;
+}
+
+.reminder {
+    position: absolute;
+    top: 150px;
+    right: 15px;
+    left: 780px;
+    background-color: white;
+    padding: 10px;
+}
+
+.background {
+    background-image: url('/public/jumping_game_background.jpg');
+    width: 100%;
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blockPic {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+}
+
+.number {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 150px;
+    text-align: center;
+    line-height: 200px;
+    width: 500px;
+    height: 300px;
+}
+
+.ui.three.column.grid {
+    position: absolute;
+    margin: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.ui.green.basic.button.one {
+    text-align: center;
+}   
+
+.bigContainer {
+    width: 1000px;
+    height: 725px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+}
+
+.ui.container {
+    width: 500px;
+    height: 725px;
+    background-color:rgb(218, 52, 255);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid rgb(68, 255, 47);
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+}
+
+.floor {
+    width: 100%;
+    height: 25px;
+    background-color: aqua;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    margin: auto;
+}
+
+.block {
+    width: 60px;
+    height: 80px;
+    position: absolute;
+    z-index: 2;
+    left: 64%;
+    background-size: 60px, 80px;
+}
+
+.tileframe {
+    width: 450px;
+    height: 630px;
+    bottom: 100px;
+    background-color: rgb(218, 52, 255);
+    margin: auto;
+}
+
+.tile {
+    width: 20px; /*80*/
+    height: 10px;
+    bottom: 0px;
+    position: absolute;
+    background-color:cyan;
+}
+
+.score_div {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color:cyan;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.highscore_div {
+    font-family: Andale Mono, monospace;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 6px;
+    color: aqua;
+}
+
+.worldhighscore_div {
+    font-family: Andale Mono, monospace;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 6px;
+    color: white;
+}
+
+.worldhighscoreholder_div {
+    font-family: Andale Mono, monospace;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 6px;
+    color: white;
+}
+
+.nft_button {
+    position: absolute;
+    font-family: Andale Mono, monospace;
+    font-weight: bold;
+    font-size: 20px;
+    height: 40px;
+    width: 150px;
+    top: 70%;
+    left: 17%;
+    background-color: aqua;
+    border: none;
+    z-index: 3;
+}
+.play_again_button1 {
+    position: absolute;
+    font-family: Andale Mono, monospace;
+    font-weight: bold;
+    font-size: 20px;
+    height: 40px;
+    width: 150px;
+    top: 70%;
+    left: 53%;
+    background-color: aqua;
+    border: none;
+    z-index: 3;
+}
+
+.gameover {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    background: radial-gradient(
+    ellipse at center,
+    darkcyan 0%,
+    rgb(218, 52, 255) 70%,
+    rgba(0, 128, 172, 0) 70.3%
+    );
+    text-align: center;
+    line-height: 300px;
+    width: 500px;
+    height: 300px;
+    z-index: 2;
+    color: cyan;
+    animation: fadeIn linear 7s;
+    -webkit-animation: fadeIn linear 7s;
+    -moz-animation: fadeIn linear 7s;
+    -o-animation: fadeIn linear 7s;
+    -ms-animation: fadeIn linear 7s;
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
