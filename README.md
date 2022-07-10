@@ -1,4 +1,4 @@
-# A Simple Matic Ethereum Game Where You Can Earn NFTs
+# Matic Based NFT Jumping Game
 
 * Unguided Project
 * In the game make sure to hit the link to the Mumbai Faucet to retrieve some TMATIC to fully interact with the game
