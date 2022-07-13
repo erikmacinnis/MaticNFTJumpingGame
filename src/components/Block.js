@@ -43,7 +43,6 @@ const Block = ({nftChange, setScore, score, setEnded, height, setHeight, bottom,
 
     // changes the block skin
     const changeBlock = () => {
-        console.log("change block");
         const tokenId = localStorage.getItem("current block");
         newImage = images[tokenId];
         blockRef.current.firstChild.src = newImage;
@@ -106,8 +105,6 @@ const Block = ({nftChange, setScore, score, setEnded, height, setHeight, bottom,
                 if (event.keyCode === 39){
                     timerRight = setInterval(moveRight, 10);
                     function moveRight() {
-                        console.log(blockRef.current.style);
-                        console.log(blockRef.current);
                         if (parseInt(blockRef.current.style.left) <= 87){
                             blockRef.current.style.left = (parseInt(blockRef.current.style.left) + 1) + "%";
                         }
