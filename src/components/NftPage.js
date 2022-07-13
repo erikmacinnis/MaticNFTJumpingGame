@@ -60,6 +60,8 @@ const NftPage = ({setNftPage, gameContract, setNftChange, nftChange, highScore})
         if (owner) {
             // If you click on the NFT you already own you revert to using the original NFT block
             if (previousTokenId == tokenId) {
+                const currentBlockElement = document.getElementById(tokenId).parentElement.firstChild;
+                currentBlockElement.firstChild.innerHTML = "Free Me!!"
                 localStorage.setItem("current block", 0);
             }
             else {
