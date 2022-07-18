@@ -171,7 +171,7 @@ const Block = ({nftChange, setScore, score, setEnded, height, setHeight, bottom,
     }
 
     return (
-        <div ref={blockRef} className="block" onClick={() => {jump()}} style={{bottom: pixelHeight, left: initialPos}}>
+        <div ref={blockRef} className="block" style={{bottom: pixelHeight, left: initialPos}}>
             <img className='blockPic' src={preset}></img>
         </div>
     )
