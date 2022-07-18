@@ -263,11 +263,11 @@ const App = () => {
                         </div>
                         <div className='faucet'>
                             You can get your TMATIC tokens through this faucet 
-                            <a href="https://faucet.polygon.technology/"> HERE</a>
+                            <a href="https://faucet.polygon.technology/" target="_blank"> HERE</a>
                         </div>
                         <div className='testnet'>
                             Check out the leader on the Mumbai explorer 
-                            <a href="https://mumbai.polygonscan.com/"> HERE</a>
+                            <a href="https://mumbai.polygonscan.com/" target="_blank"> HERE</a>
                         </div>
                         <div className="ui container" id="container">
                             <Score connected={connected} setHighScore={setHighScore} setWorldHighScore={setWorldHighScore} setWorldHighScoreHolder={setWorldHighScoreHolder} gameContract={gameContract} highScore={highScore} worldHighScore={worldHighScore} worldHighScoreHolder={worldHighScoreHolder} setNftPage={setNftPage} setScore={setScore} setEnded={setEnded} setHeight={setHeight} setBottom={setBottom} score={score} ended={ended} bottom={bottom}/>
@@ -290,7 +290,7 @@ const App = () => {
                     </div>
                     <div className='faucet'>
                             You can trade your NFTs on  
-                            <a href="https://testnets.opensea.io/"> Opensea!</a>
+                            <a href="https://testnets.opensea.io/" target="_blank"> Opensea!</a>
                         </div>
                     <div className="ui container" style={{backgroundColor: "black"}}>
                         <NftPage gameContract={gameContract} setNftPage={setNftPage} highScore={highScore} setNftChange={setNftChange} nftChange={nftChange}/>
