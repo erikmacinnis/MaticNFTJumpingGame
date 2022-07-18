@@ -126,7 +126,8 @@ const App = () => {
                     // checking if the wallet has created its own game smart contract
                     if (!(await factory.isPlayedBefore(walletAddress))){
                         // sets nft block to basic block
-
+                        
+                        localStorage.setItem("current block", 0);
                         // Creates account for new user then loads the game again 
                         // On the next reload the user will now have an account
                         async function newGame() {
