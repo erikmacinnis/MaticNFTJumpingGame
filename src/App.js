@@ -142,7 +142,6 @@ const App = () => {
                             confirmButtonText: "Yup",
                         }).then((result) => {
                             if (result.isConfirmed) {
-                                localStorage.setItem("current block", 0);
                                 newGame();
                             }
                             else {
@@ -177,6 +176,7 @@ const App = () => {
                     }
             }
             else {
+                localStorage.setItem("current block", 0);
                 setConnected(false);
                 setWorldHighScore(0);
                 setHighScore(0);
