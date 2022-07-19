@@ -43,7 +43,10 @@ const Block = ({nftChange, setScore, score, setEnded, height, setHeight, bottom,
 
     // changes the block skin
     const changeBlock = () => {
-        const tokenId = localStorage.getItem("current block");
+        let tokenId = localStorage.getItem("current block");
+        if (tokenId === null) {
+            tokenId = 0;
+        }
         newImage = images[tokenId];
         blockRef.current.firstChild.src = newImage;
     }
