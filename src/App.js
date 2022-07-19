@@ -99,6 +99,11 @@ const App = () => {
             // send ether and pay to change state within the blockchain.
             // For this, you need the account signer...
             signer = provider.getSigner()
+            
+            if (localStorage.getItem("current block") === null) {
+                // sets nft block to basic block
+                localStorage.setItem("current block", 0);
+            }
 
             const chainId = 80001;
             // Connecting the user to the Mumbai chain if they are not already connected
@@ -125,9 +130,7 @@ const App = () => {
                 try {
                     // checking if the wallet has created its own game smart contract
                     if (!(await factory.isPlayedBefore(walletAddress))){
-                        // sets nft block to basic block
-                        
-                        localStorage.setItem("current block", 0);
+               
                         // Creates account for new user then loads the game again 
                         // On the next reload the user will now have an account
                         async function newGame() {
@@ -147,10 +150,7 @@ const App = () => {
                             }
                             else {
                                 // sets default functionality
-                                setConnected(false);
-                                setWorldHighScore(0);
-                                setHighScore(0);
-                                setWorldHighScoreHolder(""); 
+                                notConnected();
                                 return;
                             }
                         })
@@ -169,19 +169,13 @@ const App = () => {
                         }
                 }
                 catch(err) {
-                    setConnected(false);
-                    setWorldHighScore(0);
-                    setHighScore(0);
-                    setWorldHighScoreHolder(""); 
+                    notConnected(); 
                     return;
                     }
             }
             else {
                 localStorage.setItem("current block", 0);
-                setConnected(false);
-                setWorldHighScore(0);
-                setHighScore(0);
-                setWorldHighScoreHolder(""); 
+                notConnected();
             }
 
         } 
@@ -193,11 +187,15 @@ const App = () => {
             })
             // If you don't specify a //url//, Ethers connects to the default 
             // (i.e. ``http:/\/localhost:8545``)
-            setConnected(false);
-            setWorldHighScore(0);
-            setHighScore(0);
-            setWorldHighScoreHolder(""); 
+            notConnected();
         }
+    }
+    
+    const notConnected = () => {
+        setConnected(false);
+        setWorldHighScore(0);
+        setHighScore(0);
+        setWorldHighScoreHolder(""); 
     }
 
     const startGame = async() => {
