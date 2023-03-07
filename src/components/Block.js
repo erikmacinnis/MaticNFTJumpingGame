@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 import '../css/stylesheet.css';
 import preset from '../MetaData/Images/unsplashImage.jpg';
 import A from '../MetaData/Images/1.png';
@@ -43,10 +43,20 @@ const Block = ({nftChange, setScore, score, setEnded, height, setHeight, bottom,
 
     // changes the block skin
     const changeBlock = () => {
+<<<<<<< Updated upstream
         let tokenId = localStorage.getItem("current block");
         if (tokenId === null) {
             tokenId = 0;
         }
+=======
+        console.log("change block");
+        let tokenId = localStorage.getItem("current block");
+        if (tokenId === null) {
+            console.log("changing to zero now");
+            tokenId = 0;
+        }
+        console.log(tokenId);
+>>>>>>> Stashed changes
         newImage = images[tokenId];
         blockRef.current.firstChild.src = newImage;
     }

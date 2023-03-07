@@ -21,9 +21,9 @@ if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
     // (i.e. ``http:/\/localhost:8545``)
     const provider = new ethers.providers.JsonRpcProvider("https://speedy-nodes-nyc.moralis.io/00d2c7794a08b46d3079567b/polygon/mumbai");
 
-    // // The provider also allows signing transactions to
-    // // send ether and pay to change state within the blockchain.
-    // // For this, we need the account signer...
+    // The provider also allows signing transactions to
+    // send ether and pay to change state within the blockchain.
+    // For this, we need the account signer...
     signer = provider.getSigner()
 
 }

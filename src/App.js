@@ -1,11 +1,3 @@
-// Todo 
-// give the app a nice background and feel
-// Handle the block null value issue in Block file
-// Document the rest
-// change the alert and confirm buttons with https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener
-// test the game a little
-// put on GitHub and host it on web with https://fleek.co/
-
 import React, {useEffect, useState, useRef} from 'react';
 import Block from './components/Block.js';
 import TileFrame from './components/TileFrame.js';
@@ -105,6 +97,12 @@ const App = () => {
                 localStorage.setItem("current block", 0);
             }
 
+            if (localStorage.getItem("current block") === null) {
+                // sets nft block to basic block
+                console.log("setting local storage to 0");
+                localStorage.setItem("current block", 0);
+            }
+
             const chainId = 80001;
             // Connecting the user to the Mumbai chain if they are not already connected
             if (window.ethereum.networkVersion !== chainId) {
@@ -117,7 +115,7 @@ const App = () => {
                     } 
                 }
             }
-            if (window.ethereum.isConnected() && window.ethereum.networkVersion == chainId) {
+            if (window.ethereum.isConnected() && window.ethereum.networkVersion === chainId) {
                 const walletAddress = await signer.getAddress();
                 const ERC20_ABI = [
                     'constructor()',
@@ -130,7 +128,11 @@ const App = () => {
                 try {
                     // checking if the wallet has created its own game smart contract
                     if (!(await factory.isPlayedBefore(walletAddress))){
+<<<<<<< Updated upstream
                
+=======
+
+>>>>>>> Stashed changes
                         // Creates account for new user then loads the game again 
                         // On the next reload the user will now have an account
                         async function newGame() {
@@ -169,12 +171,19 @@ const App = () => {
                         }
                 }
                 catch(err) {
+<<<<<<< Updated upstream
                     notConnected(); 
+=======
+                    notConnected();
+>>>>>>> Stashed changes
                     return;
                     }
             }
             else {
+<<<<<<< Updated upstream
                 localStorage.setItem("current block", 0);
+=======
+>>>>>>> Stashed changes
                 notConnected();
             }
 
@@ -191,6 +200,13 @@ const App = () => {
         }
     }
     
+    const notConnected = () => {
+        setConnected(false);
+        setWorldHighScore(0);
+        setHighScore(0);
+        setWorldHighScoreHolder(""); 
+    }
+
     const notConnected = () => {
         setConnected(false);
         setWorldHighScore(0);

@@ -1,0 +1,2 @@
+{"v":0,"name":"sugar","msg":"Lend me some sugar, I am your neighbor.","level":30,"hostname":"Eriks-MBP.localdomain","pid":7308,"time":"2022-09-28T11:11:54.953181Z","target":"sugar","line":116,"file":"src/main.rs"}
+{"v":0,"name":"sugar","msg":"Cache file 'cache.json' not found. Run `sugar upload` to create it or provide it with the --cache option.","level":50,"hostname":"Eriks-MBP.localdomain","pid":7308,"time":"2022-09-28T11:11:54.955229Z","target":"sugar_cli::cache","line":153,"file":"src/cache.rs"}
